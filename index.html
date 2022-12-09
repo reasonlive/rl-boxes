@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>game</title>
+	<link rel="stylesheet" href="./css/index.css">
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+	
+
+</head>
+<body style = "margin:0;padding:0">
+		<div class="popup" hidden>
+			<div class="popup__inset inset_my-theme">
+				<div class="popup__inset__content">
+					<p>Please, put down your name here:</p>
+					<input type="text" class="input-name" id="name">
+					<label for="name">OK</label>
+				</div>
+				
+			</div>
+		</div>
+		<div class="status">
+			<p class="status__text">Hello Player!</p>
+			<div class="timer" hidden></div>
+		</div>
+	<div class="main">
+		<div class="greeting">
+			<p class="greeting__title">Welcome to the game!</p>
+			<br>
+			<button class="greeting__btn-begin btn_my-theme">Begin</button>
+		</div>
+		
+		
+		
+		<div class="main__play-box">
+			<div class="play-box__square player" tabindex="1">
+				
+			</div>
+			<div class="play-box__square" tabindex="1"></div>
+			<div class="play-box__square" tabindex="1"></div>
+			<div class="play-box__square" tabindex="1"></div>
+			<div class="play-box__square" tabindex="1"></div>
+			<div class="play-box__square" tabindex="1"></div>
+			<div class="play-box__square" tabindex="1"></div>
+			<div class="play-box__square" tabindex="1"></div>
+			
+
+
+		</div>
+		
+		
+	</div>
+	
+	
+	<div class="button inset_my-theme">
+			<div class="button__item btn_my-theme">start</div>
+			<div class="button__item btn_my-theme">quit</div>
+		</div>
+	
+	<script src="./bundle.min.js" ></script>
+</body>
+</html>

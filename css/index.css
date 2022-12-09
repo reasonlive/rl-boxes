@@ -1,0 +1,277 @@
+@font-face{
+	font-family: "Cookie Regular";
+	src: url("../fonts/cook.ttf");
+}
+
+
+/* styles for themes */
+.inset_my-theme{
+	border-radius: 5px;
+	background-color: MediumSeaGreen;
+	box-shadow: 5px 0 10px rgba(0,0,0,0.5);
+	font: 15px cursive;
+}
+.main_my-theme{
+	background: lightgreen;
+}
+/* popup styles */
+.popup{
+	position: absolute;
+	z-index: 9999;
+	background: rgba(0,0,0,0.8);
+	width:100%;height:100%;
+}
+
+.popup__inset{
+	text-align: center;
+	position: absolute;
+	left:0;right:0;
+	margin:150px auto;
+	width:0px;height:0px;
+	transition: width 0.5s ease-in-out 0s, height 0.5s ease-in-out 0s;
+
+}
+.popup__inset__content{
+	display:none;
+}
+.input-name{
+	margin-left: 8%;
+	margin-bottom: 10px;
+	height:30px;
+	background-color: lightgreen;
+	font: 15px cursive;
+}
+label{
+	background: white;
+	font-size: 20px;
+	padding-bottom:6px;
+}
+label:hover{
+	cursor:pointer;
+	color: lightgreen;
+}
+/*////////////////////// main styles //////////////////////////////////*/
+
+.main{
+width:100%;
+background: lightgreen;
+display: flex;
+justify-content: center;
+height: 300px;
+}
+.greeting{
+	cursor: default;
+	border-radius: 5px;
+	margin-top: 40px;
+	background-color: MediumSeaGreen;
+	height: 50%;
+	box-shadow: 5px 0 10px rgba(0,0,0,0.5)
+}
+
+.greeting__title{
+	margin:0;padding:0;
+	font-family: "Cookie Regular";
+	font-size: 45px;
+}
+.greeting__btn-begin{
+	margin: -50px 0 20px 35%;
+	height:40px;
+	width:80px;
+}
+.btn_my-theme{
+	border-radius: 5px;
+	cursor:pointer;
+	background-color: MediumAquaMarine;
+	font:20px cursive;
+}
+.greeting__btn-begin:hover{
+	background-color: maroon;
+	color: white;
+}
+
+@keyframes changeColor{
+	from{ color:black }
+	50%{ color: goldenrod }
+	to{ color: darkred}
+}
+@keyframes blink{
+	from{opacity: 0}
+	to{opacity: 1}
+}
+.rule-box{
+	position: relative;
+	margin-left: -20px;
+	height:50px;
+	width:500px;
+}
+.rule{
+	position: absolute;
+	font: 1.4em  cursive;
+	animation: changeColor 0.5s infinite ease;
+
+}
+
+.status{
+width:100%;
+height: 50px;
+background: #345644;
+display:flex;
+justify-content: center;
+}
+.status__text{
+	font-family: "Cookie Regular";
+	margin:0;
+	text-align: center;
+	font-size: 40px;
+	padding: 5px;
+	color:white;
+}
+.main__play-box{
+opacity: 0;
+width: 300px;
+height: 300px;
+background-color: lightgreen;
+outline: 2px solid black;
+display:none;
+flex-wrap:wrap;
+background-image: url("../img/hole.jpg");
+background-size: 100px 100px;
+background-repeat: no-repeat;
+background-position: 100% 100%;
+transition: opacity 2s ease 0s;
+}
+.play-box__square{
+	transform-origin: 50px 50px;
+	-webkit-transform-origin: 50px 50px;
+	box-sizing: border-box;
+	width:100px;
+	height:100px;
+	background: grey;
+	border: 0.5px solid black;
+	
+}
+
+.play-box__square:hover{
+	border-color: white;
+	cursor:pointer;
+}
+
+.player{
+	background: url("../img/dog.jpg");
+	background-size: 100px;
+
+}
+.player:hover{
+	border-color: yellow;
+}
+.go-pointer{
+
+}
+.button{
+	text-align: center;
+	display:none;
+	justify-content: space-around;
+	align-items: center;
+	margin:100px auto;
+	width:200px;
+	height: 50px;
+}
+.button__item{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	width:70px;
+	height:50%;
+}
+.button__item:hover{
+	background-color: yellowgreen;
+}
+
+@keyframes blinked{
+	from{color: white}
+	50%{color: black}
+	to{color: white;}
+}
+.timer-blink{
+	animation: blinked 1s ease infinite;
+
+}
+.timer{
+	height:40px;
+	width:145px;
+	font: 2em Consolas;
+	background: orange;
+	color: white;
+	margin-top:5px;
+	/* position: absolute;
+	right:300px;top:10px; */
+}
+.game-over{
+	margin:40% auto;
+	color: red;
+	font-family: monospace;
+	font-size: 2px;
+	transition: font-size 1s linear ;
+}
+.win{
+	margin: auto;
+	font-family: Consolas monospace;
+	font-size: 40px;
+	transition: font-size 1s linear ;
+}
+/* animation for box spread in the end of the game */
+@keyframes fly-left{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(-3600deg);}
+}
+@keyframes fly-right{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(3600deg);}
+}
+
+.box-spread-left{
+	animation: fly-left 8s 1 linear;
+	transform-origin: 50px 50px;
+	-webkit-transform-origin: 50px 50px;
+}
+.box-spread-right{
+	animation: fly-right 8s 1 linear;
+
+}
+
+@media screen and (max-width:1320px){
+	.rule-box{
+		margin-top:250px;
+		position: relative;
+		height:50px;
+		width:550px;
+		line-height: 50%;
+	}
+	.rule{
+		position: absolute;
+		font: 1.2em cursive;
+		animation: changeColor 0.5s infinite ease;
+	}
+}
+
+@media screen and (max-width:560px){
+	.rule-box{
+		margin-top:250px;
+		margin-left:10px;
+		position: relative;
+		height:50px;
+		width:400px;
+		line-height: 50%;
+	}
+	.rule{
+		position: absolute;
+		font: 1em cursive;
+		animation: changeColor 0.5s infinite ease;
+	}
+	.win{
+	margin: auto;
+	font-family: Consolas monospace;
+	font-size: 20px;
+	transition: font-size 1s linear;
+	}
+}
